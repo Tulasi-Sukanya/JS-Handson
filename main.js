@@ -188,7 +188,16 @@ animateAllWords(animate);
 // Example2:
 
 //8. Create examples to explain async await function
-
+console.log("hi")
+let name=new Promise(function(resolve,reject){
+  setTimeout(()=>{resolve("sukku")},1000)  
+})
+async function x(){
+    let result=await name;
+    console.log(result);
+    console.log("hello")
+}
+x();
 //9. Create examples to explain promise.all function
 // Promise.all() method waits for fulfillment of all promises and then prints data.
 let firstPromise = new Promise(function(resolve,reject){
